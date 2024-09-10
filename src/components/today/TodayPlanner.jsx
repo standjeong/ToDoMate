@@ -8,7 +8,7 @@ export default function TodayPlanner() {
 
   return (
     <section>
-      <Header />
+      <Header onClearAll={() => setTodos([])} />
       <TodoList todos={todos} />
       <AddTodo />
     </section>
