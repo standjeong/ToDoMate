@@ -1,9 +1,15 @@
-import React from 'react';
+export default function Todo({ todo, onChange, onDelete }) {
+  const handleStatusChange = (e) =>
+    onChange({ ...todo, done: e.target.checked ? true : false });
 
-export default function Todo({ todo, onDelete }) {
   return (
     <li>
-      <input type='checkbox' id={todo.id} />
+      <input
+        type='checkbox'
+        id={todo.id}
+        checked={todo.done}
+        onChange={handleStatusChange}
+      />
       <label htmlFor={todo.id}>{todo.text}</label>
       <button onClick={() => onDelete(todo.id)}>삭제</button>
     </li>
