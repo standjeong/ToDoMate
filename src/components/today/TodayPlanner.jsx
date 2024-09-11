@@ -4,19 +4,19 @@ import Header from './Header';
 import TodoList from './TodoList';
 
 export default function TodayPlanner() {
-  const [todos, setTodos] = useState(initialVal);
+  const [todos, setTodos] = useState('');
+  const handleDelete = (id) => {
+    setTodos(todos.filter((todo) => todo.id !== id));
+  };
+  const handleAdd = (newTodo) => {
+    setTodos([...todos, newTodo]);
+  };
 
   return (
     <section>
       <Header onClearAll={() => setTodos([])} />
-      <TodoList todos={todos} />
-      <AddTodo />
+      <TodoList todos={todos} onDelete={handleDelete} />
+      <AddTodo onAdd={handleAdd} />
     </section>
   );
 }
-
-const initialVal = [
-  { id: 1, text: '프로젝트끝내기', completed: false },
-  { id: 2, text: '포폴작업', completed: false },
-  { id: 3, text: '청소하기', completed: false },
-];
