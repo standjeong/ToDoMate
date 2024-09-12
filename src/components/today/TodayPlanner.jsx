@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import AddTodo from './AddTodo';
 import Header from './Header';
 import TodoList from './TodoList';
@@ -7,7 +7,8 @@ const FILTERS = ['all', 'active', 'done'];
 
 export default function TodayPlanner() {
   const [filter, setFilter] = useState(FILTERS[0]);
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(getFromLocalStorage);
+
   const handleChange = (updatedTodo) => {
     setTodos(
       todos.map((todo) => (todo.id === updatedTodo.id ? updatedTodo : todo))
@@ -16,9 +17,11 @@ export default function TodayPlanner() {
   const handleDelete = (id) => {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
-  const handleAdd = (newTodo) => {
-    setTodos([...todos, newTodo]);
-  };
+  const handleAdd = (newTodo) => setTodos([...todos, newTodo]);
+
+  useEffect(() => {
+    localStorage.setItem('dailyTodos', JSON.stringify(todos));
+  }, [todos]);
 
   return (
     <section>
@@ -37,4 +40,10 @@ export default function TodayPlanner() {
       <AddTodo onAdd={handleAdd} />
     </section>
   );
+}
+
+function getFromLocalStorage() {
+  const todosString = localStorage.getItem('dailyTodos');
+  const todosObj = JSON.parse(todosString);
+  return todosString ? todosObj : [];
 }
