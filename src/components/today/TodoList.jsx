@@ -1,19 +1,14 @@
 import React from 'react';
 import Todo from './Todo';
+import { useDailyTodoContext } from '../../context/DailyTodoContext';
 
-export default function TodoList({ filtered, todos, onDelete, onChange }) {
+export default function TodoList({ filtered }) {
+  const { todos } = useDailyTodoContext();
   const filteredTodos = getFilteredTodos(filtered, todos);
   return (
     <ul>
       {filteredTodos &&
-        filteredTodos.map((todo) => (
-          <Todo
-            key={todo.id}
-            todo={todo}
-            onDelete={onDelete}
-            onChange={onChange}
-          />
-        ))}
+        filteredTodos.map((todo) => <Todo key={todo.id} todo={todo} />)}
     </ul>
   );
 }
