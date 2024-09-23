@@ -1,0 +1,14 @@
+.container {
+  height: 300px;
+  width: 600px;
+  margin: 2rem auto;
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 7px 18px 1px rgba(127, 120, 120, 0.53);
+  -webkit-box-shadow: 2px 7px 18px 1px rgba(127, 120, 120, 0.53);
+  -moz-box-shadow: 2px 7px 18px 1px rgba(127, 120, 120, 0.53);
+}

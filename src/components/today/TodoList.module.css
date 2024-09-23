@@ -1,0 +1,11 @@
+.listContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.ul {
+  flex: 1 1 auto;
+  overflow-y: auto;
+}

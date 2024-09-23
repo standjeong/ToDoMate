@@ -1,4 +1,6 @@
+import styles from './Todo.module.css';
 import { useDailyTodoContext } from '../../context/DailyTodoContext';
+import { RiDeleteBinLine } from 'react-icons/ri';
 
 export default function Todo({ todo }) {
   const { handleChange, handleDelete } = useDailyTodoContext();
@@ -6,15 +8,22 @@ export default function Todo({ todo }) {
     handleChange({ ...todo, done: e.target.checked ? true : false });
 
   return (
-    <li>
+    <li className={styles.li}>
       <input
+        className={styles.checkbox}
         type='checkbox'
         id={todo.id}
         checked={todo.done}
         onChange={onStatusChange}
       />
-      <label htmlFor={todo.id}>{todo.text}</label>
-      <button onClick={() => handleDelete(todo.id)}>삭제</button>
+      <label className={styles.text} htmlFor={todo.id}>
+        {todo.text}
+      </label>
+
+      <RiDeleteBinLine
+        className={styles.button}
+        onClick={() => handleDelete(todo.id)}
+      />
     </li>
   );
 }

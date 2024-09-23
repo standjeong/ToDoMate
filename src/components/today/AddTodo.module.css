@@ -1,0 +1,23 @@
+.form {
+  display: flex;
+  flex-shrink: 0;
+  padding: 1rem;
+}
+
+.input {
+  font-size: 1.2rem;
+  flex: 1 0 auto;
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+  border-top-left-radius: var(--inputField-radius);
+  border-bottom-left-radius: var(--inputField-radius);
+}
+.button {
+  font-size: 1.2rem;
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  padding: 0 1rem;
+  border-top-right-radius: var(--inputField-radius);
+  border-bottom-right-radius: var(--inputField-radius);
+}

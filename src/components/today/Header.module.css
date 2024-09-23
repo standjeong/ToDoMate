@@ -1,0 +1,43 @@
+.header {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-primary-variant);
+}
+.titleBox {
+  display: flex;
+  align-items: center;
+}
+.h1 {
+  font-size: 1.5rem;
+}
+.buttonAllDelete {
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+.buttonAllDelete:hover {
+  transform: scaleX(-1);
+}
+
+.filters {
+  display: flex;
+  gap: 0.3rem;
+}
+.buttonFilter {
+  cursor: pointer;
+  font-size: 1.1rem;
+  opacity: 0.8;
+  text-transform: capitalize;
+  border-bottom: 2px solid transparent;
+  position: relative;
+}
+
+.buttonFilter:hover,
+.buttonFilter.selected {
+  opacity: 1;
+  border-bottom: 2px solid var(--color-accent);
+  border-radius: 0.4rem;
+  box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.2);
+}

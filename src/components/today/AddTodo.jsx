@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import styles from './AddTodo.module.css';
+import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { useDailyTodoContext } from '../../context/DailyTodoContext';
 
@@ -15,13 +16,14 @@ export default function AddTodo() {
   };
 
   return (
-    <form onSubmit={onAdd}>
+    <form className={styles.form} onSubmit={onAdd}>
       <input
+        className={styles.input}
         type='text'
         value={input}
         onChange={(e) => setInput(e.target.value)}
       />
-      <button>Add</button>
+      <button className={styles.button}>Add</button>
     </form>
   );
 }

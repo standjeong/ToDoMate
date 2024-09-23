@@ -1,5 +1,5 @@
+import styles from './TodayPlanner.module.css';
 import { useState } from 'react';
-import AddTodo from './AddTodo';
 import Header from './Header';
 import TodoList from './TodoList';
 
@@ -9,10 +9,9 @@ export default function TodayPlanner() {
   const [filter, setFilter] = useState(FILTERS[0]);
 
   return (
-    <section>
+    <section className={styles.container}>
       <Header filtered={filter} filters={FILTERS} onFilterChange={setFilter} />
       <TodoList filtered={filter} />
-      <AddTodo />
     </section>
   );
 }

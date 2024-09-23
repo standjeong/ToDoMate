@@ -1,15 +1,19 @@
-import React from 'react';
+import styles from './TodoList.module.css';
 import Todo from './Todo';
+import AddTodo from './AddTodo';
 import { useDailyTodoContext } from '../../context/DailyTodoContext';
 
 export default function TodoList({ filtered }) {
   const { todos } = useDailyTodoContext();
   const filteredTodos = getFilteredTodos(filtered, todos);
   return (
-    <ul>
-      {filteredTodos &&
-        filteredTodos.map((todo) => <Todo key={todo.id} todo={todo} />)}
-    </ul>
+    <section className={styles.listContainer}>
+      <ul className={styles.ul}>
+        {filteredTodos &&
+          filteredTodos.map((todo) => <Todo key={todo.id} todo={todo} />)}
+      </ul>
+      <AddTodo />
+    </section>
   );
 }
 
