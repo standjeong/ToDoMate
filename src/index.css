@@ -13,6 +13,15 @@
   --inputField-radius: 0.6rem;
 }
 
+html.dark {
+  --color-bg: #716452;
+  --color-primary: #02343f;
+  --color-primary-variant: #0c4654;
+  --color-accent: #f0edcc;
+  --color-accent-variant: #fffeee;
+  --color-text: #fffefe;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -34,6 +43,7 @@ body {
 
 #root {
   font-family: 'Gowun Dodum', sans-serif;
+  color: var(--color-text);
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -68,6 +78,7 @@ ul {
 
 button {
   font-family: 'Gowun Dodum', sans-serif;
+  color: var(--color-text);
   background-color: transparent;
   border: none;
 }
