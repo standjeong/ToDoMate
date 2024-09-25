@@ -21,4 +21,5 @@
   padding: 0 1rem;
   border-top-right-radius: var(--inputField-radius);
   border-bottom-right-radius: var(--inputField-radius);
+  cursor: pointer;
 }

@@ -18,6 +18,9 @@
 html.dark .mode {
   font-size: 1.2rem;
 }
+.mode:hover {
+  animation: turn 2s cubic-bezier(0.9, 0.03, 0.69, 0.22);
+}
 .h1 {
   font-size: 1.5rem;
 }
@@ -49,4 +52,11 @@ html.dark .mode {
   border-bottom: 2px solid var(--color-accent);
   border-radius: 0.4rem;
   box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes turn {
+  50%,
+  100% {
+    transform: rotate(1turn);
+  }
 }

@@ -11,11 +11,13 @@
   z-index: 1000;
 }
 .modal {
-  background-color: white;
-  padding: 20px;
+  color: var(--color-text);
+  background-color: var(--color-modal-bg);
+  padding: 2rem;
   border-radius: 8px;
   text-align: center;
   z-index: 1001; /* 모달을 오버레이 위에 */
+  box-shadow: var(--box-shadow-modal);
 }
 .title {
   font-size: 1.2rem;
