@@ -21,7 +21,7 @@ export default function CompletionRateChart() {
     labels: ['완료', '남은 작업'],
     datasets: [
       {
-        label: '작업 개수',
+        label: '개수',
         data: [completedTasks, incompleteTasks],
         backgroundColor: ['#AA3C3C', '#F9FDF4'],
         hoverOffset: 5,
@@ -43,7 +43,7 @@ export default function CompletionRateChart() {
       const centerY = chart.getDatasetMeta(0).data[0].y;
 
       ctx.save();
-      ctx.font = 'bold 20px sans-serif';
+      ctx.font = '500 25px sans-serif';
       ctx.fillStyle = 'balck';
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';

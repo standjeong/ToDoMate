@@ -1,5 +1,5 @@
 :root {
-  --color-bg: #a09e9e;
+  --color-bg: #d4b996;
   --color-primary: #f0edcc;
   --color-primary-variant: #fffeee;
   --color-accent: #02343f;
@@ -17,7 +17,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    'Gowun Dodum' sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 1.2rem;
@@ -33,9 +33,18 @@ body {
 }
 
 #root {
+  font-family: 'Gowun Dodum', sans-serif;
   width: 100%;
   height: 100%;
   overflow: hidden;
+  text-align: center;
+}
+.daily_section {
+  display: inline-flex;
+  margin: 5% auto;
+  gap: 0.8rem;
+  background-color: var(--color-bg);
+  border-radius: 20rem;
 }
 
 code {
@@ -58,6 +67,7 @@ ul {
 }
 
 button {
+  font-family: 'Gowun Dodum', sans-serif;
   background-color: transparent;
   border: none;
 }
