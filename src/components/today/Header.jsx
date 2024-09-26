@@ -30,15 +30,15 @@ export default function Header({ filtered, filters, onFilterChange }) {
         />
       </div>
       <ul className={styles.filters}>
-        {filters.map((filter, index) => (
+        {filters.map((list, index) => (
           <li key={index}>
             <button
               className={`${styles.buttonFilter} ${
-                filter === filtered && styles.selected
+                list.filter === filtered && styles.selected
               }`}
-              onClick={(e) => onFilterChange(filter)}
+              onClick={(e) => onFilterChange(list.filter)}
             >
-              {filter}
+              {list.name}
             </button>
           </li>
         ))}
