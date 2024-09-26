@@ -18,7 +18,7 @@ export default function CompletionRateChart() {
   const message = getChartMessage(completionRate);
 
   const data = {
-    labels: ['완료', '남은 작업'],
+    labels: ['끝낸 작업', '남은 작업'],
     datasets: [
       {
         label: '개수',
@@ -44,7 +44,7 @@ export default function CompletionRateChart() {
 
       ctx.save();
       ctx.font = '500 25px sans-serif';
-      ctx.fillStyle = 'balck';
+      ctx.fillStyle = 'black';
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
       ctx.fillText(`${rate ? rate : 0}%`, centerX, centerY);
