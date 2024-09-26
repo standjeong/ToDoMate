@@ -12,6 +12,7 @@
 ## 🔨사용 도구
 
 - React
+- PostCSS
 - Chart.js
 - Figma
   <p> <img width='150' src='https://github.com/user-attachments/assets/3b253e39-c62c-4945-bfcc-b256245b7d4c'> </p>
