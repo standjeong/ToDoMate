@@ -4,17 +4,13 @@ import style from './Modal.module.css';
 export default function Modal({ isOpen, onClose, onConfirm, text }) {
   if (!isOpen) return null;
 
-  const handleOverlayClick = () => {
-    onClose();
-  };
-
   const onConfirmAndClose = () => {
     onConfirm();
     onClose();
   };
 
   return (
-    <section className={style.overlay} onClick={handleOverlayClick}>
+    <section className={style.overlay} onClick={onClose}>
       <div className={style.modal}>
         <h3 className={style.title}>{text} 목록을 모두 삭제할까요?</h3>
         <div className={style.buttons}>
